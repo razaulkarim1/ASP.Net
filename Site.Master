@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ASP.NET_Project.Site" %>
+
+<%@ Register Src="~/myUserCntrl.ascx" TagPrefix="uc1" TagName="myUserCntrl" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title><%:Page.Title %></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/fontawesome/font-awesome.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.6.0.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:myUserCntrl runat="server" id="myUserCntrl" />
+        <div class="container" style="height:900px;">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <p class="text-center bg-info text-light p-2">&copy; <%:DateTime.Now.Year %> - Online Electric Service</p>
+        </footer>
+    </form>
+    <script src="Scripts/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="foot" runat="server">
+
+    </asp:ContentPlaceHolder>
+</body>
+</html>
